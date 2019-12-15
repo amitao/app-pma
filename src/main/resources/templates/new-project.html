@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
+	<div class="container">
+	
+		<form action="/project/create" method="POST">	
+			<input type="text" placeholder="Project name" />
+			
+			<select>
+				<option th:value="NOTSTARTED">Not Started</option>
+				<option th:value="INPROGRESS">In progress</option>
+				<option th:value="COMPLETED">Completed</option>
+			</select>
+			
+			<textarea rows="" cols="" placeholder="Fill in description"></textarea>
+			<button type="submit">Create project</button>
+		
+		</form>
+	
+	</div>
 </body>
 </html>
