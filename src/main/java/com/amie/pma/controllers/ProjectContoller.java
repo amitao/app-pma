@@ -37,6 +37,8 @@ public class ProjectContoller {
 		
 		// use redirect to prevent duplicate submissions
 		// can redirect to any page
+		
+		// if you make changes to this code the table will drop and will create a new table 
 		return "redirect:/project/new-form";
 	}
 
