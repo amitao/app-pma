@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+	<div id="employee-form" class="container">
+			
+		<form action="/employee/create" th:object="${employee}" method="POST">
+			
+			<input type="text" placeholder="Employee first name" th:field="${employee.firstName}"/>
+			<input type="text" placeholder="Employee last name" th:field="${employee.lastName}"/>
+			<input type="text" placeholder="Employee email" th:field="${employee.email}"/>
+
+			<button type="submit">Create project</button>
+		
+		</form>
+		
+	</div>
 
 </body>
 </html>

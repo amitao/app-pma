@@ -18,7 +18,7 @@ public class ProjectContoller {
 	// create an instance of the PropjectRepo class
 	ProjectRepository projectRepo;
 	
-	@GetMapping("/new-form")
+	@GetMapping("/new-project-form")
 	// localhost:8080/project/new-form/
 	public String displayProjectForm(Model model) {
 		
@@ -39,7 +39,7 @@ public class ProjectContoller {
 		// can redirect to any page
 		
 		// if you make changes to this code the table will drop and will create a new table 
-		return "redirect:/project/new-form";
+		return "redirect:/project/new-project-form";
 	}
 
 }
